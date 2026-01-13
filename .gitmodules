@@ -1,0 +1,3 @@
+[submodule "xschem"]
+	path = xschem
+	url = git@github.com:StefanSchippers/xschem.git
