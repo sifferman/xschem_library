@@ -1,0 +1,10 @@
+In nonlibraryflow/, I have a flow to use a pre-compiled xschem binary to generate a SPICE netlist from a .sch file. This is good, but xschem is very heavy, and I don't need all its functionality.
+
+Can you now create a lightweight library to load .sch files and export a SPICE netlist? I assume you may be able to use xschem/src/netlist.c, and just bypass certain libraries that are not needed. Ideally, keep it as lightweight as possible
+
+Try to use any implementations from xschem/src directly where possible to ensure that this library is as accurate as possible.
+
+Also, could you somehow load all the configs from
+$PDK_ROOT/sky130A/libs.tech/xschem/xschemrc?
+
+Then, add a test for schematics/sky130_fd_sc_hd__dfxtp_1.sch. Ensure that it matches nonlibraryflow/netlists/sky130_fd_sc_hd__dfxtp_1.spice.
